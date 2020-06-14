@@ -2,11 +2,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
-import Logo from '../images/logo-dark.svg'
+import Logo from '../images/logo-light.svg'
 
-const Container = styled.div `
-  margin-bottom: 1.45em;
-`
+
 const Inner = styled.div `
   max-width: 80%;
   padding: 1.45em 1em;
@@ -16,33 +14,44 @@ const Inner = styled.div `
   align-items: center;
 `
 const Img = styled.img `
-  max-width: 70px;
+  width: 70px;
 `
-const Nav = styled.ul `
-  display: flex;
-  list-style: none;
-  padding: 0px;
+const Nav = styled.nav `
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+  }
+  li {
+    padding-left: 1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #233044
+
+  }
 `
 const HeaderLogo = styled(Link) `
   display: flex;
+  text-decoration: none;
 `
 
 const Header = ({ siteTitle }) => (
   <header>
-    <Container>
       <Inner>
         <HeaderLogo to="/">
           <Img src={Logo} alt="Dark Logo" />
         </HeaderLogo>
-        <nav>
-          <Nav>
-            <li>About</li>
-            <li>Photography</li>
-            <li>Contact</li>
-          </Nav>
-        </nav>
+        <Nav>
+          <ul>
+            <Link to="/about"><li>About</li></Link>
+            <Link to="/about"><li>Projects</li></Link>
+            <Link to="/about"><li>Photography</li></Link>
+            <Link to="/about"><li>Contact</li></Link>
+          </ul>
+        </Nav>
       </Inner>
-    </Container>
   </header>
 )
 
