@@ -2,15 +2,15 @@ import React from 'react'
 import Layout from "../components/layout"
 
 
-function aboutPage() {
+function Photography() {
     return (
         <Layout>
         <div>
-            <h1>About me</h1>
-            <p>sdfsdfsdfdgdfgdfgdsgdfgdfgdfgd</p>
+            <h1>My Photographs</h1>
+            <p>Here are some Photography bla bla </p>
         </div>
         </Layout>
     )
 }
 
-export default aboutPage
+export default Photography

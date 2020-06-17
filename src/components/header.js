@@ -2,7 +2,10 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
-import Logo from '../images/logo-light.svg'
+import Toggle from './toggle'
+import { GlobalStyles } from "./Globalstyle";
+
+
 
 
 const Inner = styled.div `
@@ -13,9 +16,7 @@ const Inner = styled.div `
   justify-content: space-between;
   align-items: center;
 `
-const Img = styled.img `
-  width: 70px;
-`
+
 const Nav = styled.nav `
   ul {
     display: flex;
@@ -26,32 +27,30 @@ const Nav = styled.nav `
     padding-left: 1em;
   }
 
-  a {
+`
+const HeaderLogo = styled(Link)`
     text-decoration: none;
-    color: #233044
+`;
 
-  }
-`
-const HeaderLogo = styled(Link) `
-  display: flex;
-  text-decoration: none;
-`
+const Header = ({isDark, setIsDark}) => (
 
-const Header = ({ siteTitle }) => (
+
   <header>
+    <GlobalStyles/>
       <Inner>
-        <HeaderLogo to="/">
-          <Img src={Logo} alt="Dark Logo" />
+        <HeaderLogo id="logo" to="/">
         </HeaderLogo>
         <Nav>
           <ul>
             <Link to="/about"><li>About</li></Link>
-            <Link to="/about"><li>Projects</li></Link>
-            <Link to="/about"><li>Photography</li></Link>
+            <Link to="/page-2"><li>Projects</li></Link>
+            <Link to="/photography"><li>Photography</li></Link>
             <Link to="/about"><li>Contact</li></Link>
           </ul>
         </Nav>
+        <Toggle isDark={isDark} setIsDark={setIsDark} />
       </Inner>
+
   </header>
 )
 

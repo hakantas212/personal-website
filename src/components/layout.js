@@ -1,21 +1,30 @@
 
-import React from "react"
+import React, { useState } from 'react'
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import "./layout.scss"
 import {ThemeProvider} from "styled-components";
-import { GlobalStyles } from "../components/Globalstyle";
-import  {useDarkMode} from "../components/useDarkMode"
-import { lightTheme, darkTheme } from "../components/theme"
-import Toggle from "./toggle"
+import { GlobalStyles } from "./Globalstyle";
+import { lightTheme, darkTheme } from "./themes"
 
 
 
 const Layout = ({ children }) => {
+  let localIsDark
 
-  const [theme, themeToggler, mountedComponent] = useDarkMode();
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('isDark') === 'false') {
+      localIsDark = false
+    } else {
+      localIsDark = true
+    }
+    console.log(localIsDark ? 'dark mode' : 'light mode')
+  }
+
+  const [isDark, setIsDark] = useState(localIsDark)
+
+
+
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -27,19 +36,18 @@ const Layout = ({ children }) => {
     }
   `)
 
-  if (!mountedComponent) return <div />;
 
   return (
-    <ThemeProvider theme={themeMode}>
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
     <>
     <GlobalStyles/>
-      <Header  siteTitle={data.site.siteMetadata.title} />
       <div>
-      <Toggle theme={theme} toggleTheme={themeToggler} />
+        <Header  siteTitle={data.site.siteMetadata.title} isDark={isDark} setIsDark={setIsDark}>
+        </Header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
-          {` `}
+          {`GatsbyJS`}
         </footer>
       </div>
     </>
