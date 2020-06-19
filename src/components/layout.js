@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
     } else {
       localIsDark = true
     }
-    console.log(localIsDark ? 'dark mode' : 'light mode')
   }
 
   const [isDark, setIsDark] = useState(localIsDark)
@@ -31,6 +30,10 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name
+            link
+          }
         }
       }
     }
@@ -42,12 +45,18 @@ const Layout = ({ children }) => {
     <>
     <GlobalStyles/>
       <div>
-        <Header  siteTitle={data.site.siteMetadata.title} isDark={isDark} setIsDark={setIsDark}>
+        <Header menuLinks={data.site.siteMetadata.menuLinks}  siteTitle={data.site.siteMetadata.title} isDark={isDark} setIsDark={setIsDark}>
         </Header>
-        <main>{children}</main>
+        <main>
+          <section>
+            {children}
+          </section>
+        </main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {`GatsbyJS`}
+          <section>
+            © {new Date().getFullYear()}, Built with
+            {`GatsbyJS`}
+          </section>
         </footer>
       </div>
     </>

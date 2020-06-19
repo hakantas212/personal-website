@@ -1,21 +1,33 @@
 import React  from 'react';
 import styled from 'styled-components';
+import { lightTheme } from './themes';
+import Moon from '../images/moon.svg'
+import Sun from '../images/sun.svg'
 
 const Button = styled.button`
+    width: 75px;
+    height: 30px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background: ${props => props.theme.colors.gradient};
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 1rem;
+
+    img {
+      max-width: 1.4rem;
+      height: 100%;
+      transition: all 0.1s linear;
   
-  border: 2px solid ${({ theme }) => theme.toggleBorder};
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 0.5rem;
-  justify-content: space-between;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0.5rem;
-  position: relative;
-  width: 8rem;
-  height: 4rem;
-  outline: none;
-  }
+      &:first-child {
+        transform: ${props => props.theme === lightTheme  ? 'translateX(-20px)' : 'translateX(20px)'};
+      }
+  
+      &:nth-child(2) {
+        transform: ${props => props.theme === lightTheme  ? 'translateX(30)' : 'translateX(10)'};
+      }
+    }
 
 `;
 
@@ -28,7 +40,9 @@ const Toggle = ({ isDark, setIsDark }) => {
   }
     return (
       <Button onClick={handleClick}>
-
+         { isDark === true ? <img src={Moon} alt="Moon" title="Moon"/> :
+          <img src={Sun} alt="Sun" title="Sun"/>
+         } 
       </Button>
     );
 };
