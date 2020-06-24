@@ -516,9 +516,9 @@ export const GlobalStyles = createGlobalStyle`
   th {
     font-weight: bold;
   }
-  li {
-    margin-bottom: calc(1.45rem / 2);
-  }
+  // li {
+  //   margin-bottom: calc(1.45rem / 2);
+  // }
   ol li {
     padding-left: 0;
   }
@@ -641,9 +641,6 @@ export const GlobalStyles = createGlobalStyle`
     color: ${props => props.theme.colors.textColor};
     font-size: 2em;
     text-decoration: none;
-
- 
-  
   }
 
   #logo {
@@ -662,5 +659,22 @@ export const GlobalStyles = createGlobalStyle`
 
   header {
     width: 100%;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 5rem;
+  }
+
+  .card-project {
+    width: 100%;
+    height: auto;
+    background: blue;
+
+    img {
+      width: 400px;
+      max-height: 400px;
+    }
   }
   `

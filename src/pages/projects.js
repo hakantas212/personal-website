@@ -1,16 +1,52 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Projects = () => (
+
+
+
+
+const Projects = () => {
+
+const data = useStaticQuery(graphql`
+query {
+  allContentfulProject {
+    edges{
+      node {
+        id
+       title
+      	projectImage {
+      	fluid {
+          src
+        }
+        } 
+        techStack
+      }
+    }
+  }
+}
+  `)
+
+return (
   <Layout>
-    <SEO title="Photography" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <SEO title="Projects" />
+    <div className="projects">
+      {data.allContentfulProject.edges.map((edge) => {
+        return (
+            <div  className="card-project" key={edge.node.id}>
+              <h2>{edge.node.title}</h2>
+              <img src={edge.node.projectImage.fluid.src} alt={edge.node.title}></img>
+              <li>
+                {stack}
+              </li> 
+            </div>
+        )
+      })}
+    </div>
   </Layout>
-)
+  )
+}
 
 export default Projects

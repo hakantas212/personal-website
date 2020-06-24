@@ -4,10 +4,6 @@ import React from "react"
 import styled from 'styled-components'
 import Toggle from './toggle'
 
-
-
-
-
 const Inner = styled.div `
   max-width: 1100px;
   display: flex;
@@ -37,7 +33,7 @@ const Inner = styled.div `
       align-items: start;
       align-content: center;
       border-radius: 5px;
-
+      margin: 0.4rem;
       :hover {
         background-color: ${props => props.theme.colors.hover};
         color: ${props => props.theme.colors.textColor};
@@ -50,7 +46,14 @@ const Inner = styled.div `
         font-weight: 700;
         font-size: 1.1em;
         padding: 1rem;
+
+        &.active {
+          background: ${props => props.theme.colors.hover};
+          border-radius: 5px;
+        }
       }
+
+     
     }
 
     }
@@ -63,12 +66,6 @@ const BrandLogo = styled.div`
     margin-left: 0;
 `;
 
-const activeStyles = {
-  background: 'yellow',
-  color: "blue",
-  fontWeight: 700
-}
-
 const Header = ({isDark, setIsDark, menuLinks}) => (
 
   <header>
@@ -80,7 +77,7 @@ const Header = ({isDark, setIsDark, menuLinks}) => (
             <ul>
               {menuLinks.map(link => (
                 <li key={link.name}>
-                  <Link activeStyle={activeStyles} to={link.link}>
+                  <Link activeClassName="active" to={link.link}>
                     {link.name}
                   </Link>
                   </li>
