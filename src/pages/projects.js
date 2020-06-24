@@ -16,7 +16,7 @@ query {
     edges{
       node {
         id
-       title
+        title
       	projectImage {
       	fluid {
           src
@@ -38,11 +38,15 @@ return (
             <div  className="card-project" key={edge.node.id}>
               <h2>{edge.node.title}</h2>
               <img src={edge.node.projectImage.fluid.src} alt={edge.node.title}></img>
-              <li>
-                {stack}
-              </li> 
+              <div>{edge.node.techStack.map(stack => {
+                  return(
+                    <li>{stack}</li>
+                  )
+              })}
+              </div>
             </div>
         )
+
       })}
     </div>
   </Layout>
