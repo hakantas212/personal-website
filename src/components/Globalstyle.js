@@ -667,32 +667,39 @@ export const GlobalStyles = createGlobalStyle`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap: 3rem;
+  }
 
-    .card-project {
+  .card-project {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    border-radius: .25rem .25rem 1rem 1rem;
+    background-color: ${props => props.theme.colors.background};
+    border: 1px solid ${props => props.theme.colors.hover};
+
+    img {
+      object-fit: cover;
       width: 100%;
-      height: auto;
-      position: relative;
-      display: grid;
-      grid-template-rows: 1fr auto auto;
-      border-radius: .25rem .25rem 1rem 1rem;
-      background-color: ${props => props.theme.colors.background};
-      border: 1px solid ${props => props.theme.colors.hover};
+      height: 230px;
+      border-radius: .25rem .25rem 0rem 0rem;
+    }
 
-      h2 {
-        padding: 1rem;
-      }
-
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 230px;
-        border-radius: .25rem .25rem 0rem 0rem;
+    .card-content {
+      width: 100%;
+      padding-left: 1rem;
+  
+      h2, p {
+        padding-top: 1rem;
       }
   
-      ul{
-        padding: 0;
-        padding-left: 1rem;
-        margin: 0;
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+        padding: 0px;
   
         li {
           display: inline-block;
@@ -706,30 +713,31 @@ export const GlobalStyles = createGlobalStyle`
           font-style: italic;
           cursor: default;
           align-items: center;
-          margin: 0 0.75rem 0 0;
+          margin: 0 0.75rem 0.5rem 0;
           background-color: ${props => props.theme.colors.labelColor};
           transition: background-color 0.8s ease 0s;
           color: ${props => props.theme.colors.textColor}
           }
-        } 
+      } 
+    }
+    
+    .project-links {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
 
-      .project-links {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
+      a {
+        margin: 1.75rem .75rem .75rem .75rem;
+        width: 30px;
+        height: 30px;
 
-        a {
-          margin: 1.75rem .75rem .75rem .75rem;
-          width: 30px;
-          height: 30px;
-
-          img {
-            height: 100%;
-            width: 100%;
-          }
+        img {
+          height: 100%;
+          width: 100%;
         }
       }
     }
   }
+
   `
