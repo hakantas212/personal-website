@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Toggle from './toggle'
 
 const Inner = styled.div `
-  max-width: 1100px;
+  max-width: 1280px;
   display: flex;
   padding: 2rem 0;
   align-items: center;
@@ -64,6 +64,8 @@ const Inner = styled.div `
 const BrandLogo = styled.div`
     align-items: center;
     margin-left: 0;
+    width: 60px;
+    height:60px;
 `;
 
 const Header = ({isDark, setIsDark, menuLinks}) => (
@@ -71,7 +73,9 @@ const Header = ({isDark, setIsDark, menuLinks}) => (
   <header>
       <Inner>
         <BrandLogo >
-          <Link id="logo" to="/" ></Link>
+          <Link id="logo" to="/" >
+
+          </Link>
         </BrandLogo>
         <nav>
             <ul>

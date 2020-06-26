@@ -632,6 +632,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: ${props => props.theme.colors.background};
+    transition: background-color 0.4s ease 0s;
     color: ${props => props.theme.colors.textColor};
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
@@ -645,15 +646,16 @@ export const GlobalStyles = createGlobalStyle`
 
   #logo {
     background-image: url(${props => props.theme.logo});
-    width:70px;
-    height:75px;
-    min-width:70px;
-    position:relative;
-    display:block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   section {
-    max-width: 1100px;
+    max-width: 1280px;
     margin: auto;
   }
 
@@ -663,18 +665,71 @@ export const GlobalStyles = createGlobalStyle`
 
   .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 5rem;
-  }
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: 3rem;
 
-  .card-project {
-    width: 100%;
-    height: auto;
-    background: blue;
+    .card-project {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: grid;
+      grid-template-rows: 1fr auto auto;
+      border-radius: .25rem .25rem 1rem 1rem;
+      background-color: ${props => props.theme.colors.background};
+      border: 1px solid ${props => props.theme.colors.hover};
 
-    img {
-      width: 400px;
-      max-height: 400px;
+      h2 {
+        padding: 1rem;
+      }
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 230px;
+        border-radius: .25rem .25rem 0rem 0rem;
+      }
+  
+      ul{
+        padding: 0;
+        padding-left: 1rem;
+        margin: 0;
+  
+        li {
+          display: inline-block;
+          line-height: 1.75;
+          letter-spacing: .025em;
+          text-transform: uppercase;
+          font-size: .7rem;
+          font-weight: 600;
+          border-radius: .25rem;
+          padding: .15rem 0.75rem;
+          font-style: italic;
+          cursor: default;
+          align-items: center;
+          margin: 0 0.75rem 0 0;
+          background-color: ${props => props.theme.colors.labelColor};
+          transition: background-color 0.8s ease 0s;
+          color: ${props => props.theme.colors.textColor}
+          }
+        } 
+
+      .project-links {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+          margin: 1.75rem .75rem .75rem .75rem;
+          width: 30px;
+          height: 30px;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
     }
   }
   `

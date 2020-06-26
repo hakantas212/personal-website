@@ -1,8 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import githubIcon from '../images/github-icon.svg'
+import linkIcon from '../images/link-icon.svg'
 
 
 
@@ -17,15 +18,21 @@ query {
       node {
         id
         title
+        projectDescription {
+          projectDescription
+        }
       	projectImage {
       	fluid {
           src
         }
-        } 
+        }
         techStack
+        githubLink
+        demoLink
       }
     }
   }
+
 }
   `)
 
@@ -36,17 +43,26 @@ return (
       {data.allContentfulProject.edges.map((edge) => {
         return (
             <div  className="card-project" key={edge.node.id}>
-              <h2>{edge.node.title}</h2>
               <img src={edge.node.projectImage.fluid.src} alt={edge.node.title}></img>
-              <div>{edge.node.techStack.map(stack => {
+              <h2>{edge.node.title}</h2>
+              {Object.values(edge.node.projectDescription).map((zzz, i) => {
+                    return <span key={i}>{zzz}</span>
+                  })}
+                <ul>
+                  {edge.node.techStack.map((stack,i) => {
                   return(
-                    <li>{stack}</li>
+                    <li key={i}>{stack}</li>
+
                   )
-              })}
+                  })}
+              </ul>
+              <div className="project-links">
+                <a href={edge.node.githubLink} target="_blank" rel="noreferrer"><img src={githubIcon} alt="github-icon"></img></a>
+                <a href={edge.node.demoLink} target="_blank" rel="noreferrer"><img src={linkIcon} alt="link-icon"></img></a>
               </div>
+                
             </div>
         )
-
       })}
     </div>
   </Layout>
