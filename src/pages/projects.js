@@ -58,8 +58,8 @@ return (
                 </ul>
               </div>
               <div className="project-links">
-                <a href={edge.node.githubLink} target="_blank" rel="noreferrer"><img src={githubIcon} alt="github-icon"></img></a>
-                <a href={edge.node.demoLink} target="_blank" rel="noreferrer"><img src={linkIcon} alt="link-icon"></img></a>
+                {edge.node.githubLink !== null ?  <a href={edge.node.githubLink} target="_blank" rel="noreferrer"><img src={githubIcon} alt="github-icon"></img></a> : '' }
+                {edge.node.demoLink !== null ?  <a href={edge.node.demoLink} target="_blank" rel="noreferrer"><img src={linkIcon} alt="link-icon"></img></a> : '' }
               </div>
             </div>
         )
