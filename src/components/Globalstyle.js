@@ -154,7 +154,6 @@ export const GlobalStyles = createGlobalStyle`
     outline: 1px dotted ButtonText;
   }
   fieldset {
-    border: 1px solid silver;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
   }
@@ -231,8 +230,8 @@ export const GlobalStyles = createGlobalStyle`
   h1 {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
@@ -248,8 +247,8 @@ export const GlobalStyles = createGlobalStyle`
   h2 {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
@@ -341,7 +340,7 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: 1.45rem;
   }
   ul {
-    margin-left: 1.45rem;
+    margin-left: 0;
     margin-right: 0;
     margin-top: 0;
     padding-bottom: 0;
@@ -351,6 +350,7 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: 1.45rem;
     list-style-position: outside;
     list-style-image: none;
+    list-style: none;
   }
   ol {
     margin-left: 1.45rem;
@@ -666,7 +666,7 @@ export const GlobalStyles = createGlobalStyle`
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-    gap: 3rem;
+    gap: 5rem;
   }
 
   .card-project {
@@ -676,13 +676,22 @@ export const GlobalStyles = createGlobalStyle`
     display: grid;
     grid-template-rows: 1fr auto auto;
     border-radius: .25rem .25rem 1rem 1rem;
-    background-color: ${props => props.theme.colors.background};
-    border: 1px solid ${props => props.theme.colors.hover};
+    background-color: ${props => props.theme.colors.cardBackground};
+    box-shadow: 10px -10px 0 ${props => props.theme.colors.hover};
+    transition: all 0.3s ease-in-out 0s;
+    border: 1px solid ${props => props.theme.colors.borderColor};
+
+    &:hover {
+      transition: all 0.3s ease-in-out 0s;
+      transform: translateX(3px);
+      border: 1px solid ${props => props.theme.colors.cardHover};
+      box-shadow: 0px 2px 10px ${props => props.theme.colors.cardHover};
+      }
 
     img {
       object-fit: cover;
       width: 100%;
-      height: 230px;
+      height: auto;
       border-radius: .25rem .25rem 0rem 0rem;
     }
 
@@ -690,9 +699,6 @@ export const GlobalStyles = createGlobalStyle`
       width: 100%;
       padding-left: 1rem;
   
-      h2, p {
-        padding-top: 1rem;
-      }
   
       ul {
         list-style-type: none;
@@ -715,8 +721,7 @@ export const GlobalStyles = createGlobalStyle`
           align-items: center;
           margin: 0 0.75rem 0.5rem 0;
           background-color: ${props => props.theme.colors.labelColor};
-          transition: background-color 0.8s ease 0s;
-          color: ${props => props.theme.colors.textColor}
+          color: ${props => props.theme.colors.textColor};
           }
       } 
     }
@@ -728,16 +733,50 @@ export const GlobalStyles = createGlobalStyle`
       justify-content: flex-end;
 
       a {
-        margin: 1.75rem .75rem .75rem .75rem;
+        margin: 1.75rem 1.40rem 1.75rem .75rem;
         width: 30px;
         height: 30px;
 
-        img {
+        svg {
           height: 100%;
           width: 100%;
+          transition: all 0.3s ease-in-out 0s;
+          fill: ${props => props.theme.colors.iconColor};
+            &:hover {
+              fill: ${props => props.theme.colors.iconHover}
+              }
         }
       }
     }
   }
+
+  footer {
+    margin: 3rem 0;
+    color: ${props => props.theme.colors.textColor};
+
+    .footer-container {
+      display: flex;
+      
+  
+      .footer-links  {
+        display: flex;
+  
+        li {
+          margin-left: 1.5rem;
+        
+          svg {
+            fill: ${props => props.theme.colors.iconColor};
+            transition: all 0.3s ease-in-out 0s;
+            
+            &:hover {
+              transform: scale(1.2);
+              fill: ${props => props.theme.colors.iconHover};
+            }
+          }
+        }
+      }
+    }
+  }
+
 
   `

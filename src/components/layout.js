@@ -6,6 +6,7 @@ import Header from "./header"
 import {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./Globalstyle";
 import { lightTheme, darkTheme } from "./themes"
+import Footer from './footer';
 
 
 
@@ -52,12 +53,7 @@ const Layout = ({ children }) => {
             {children}
           </section>
         </main>
-        <footer>
-          <section>
-            © {new Date().getFullYear()}, Built with
-            {`GatsbyJS`}
-          </section>
-        </footer>
+        <Footer></Footer>
       </div>
     </>
     </ThemeProvider>

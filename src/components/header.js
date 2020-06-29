@@ -35,27 +35,30 @@ const Inner = styled.div `
       border-radius: 5px;
       margin: 0.4rem;
       :hover {
+        transition: all 0.3s ease-in-out 0s;
         background-color: ${props => props.theme.colors.hover};
         color: ${props => props.theme.colors.textColor};
       }
 
-      a {
-        display: flex;
-        justify-content: space-between;
-        cursor: pointer;
-        font-weight: 700;
-        font-size: 1.1em;
-        padding: 1rem;
+        a {
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 1.1em;
+          padding: 1rem;
 
-        &.active {
-          background: ${props => props.theme.colors.hover};
-          border-radius: 5px;
+          &.active {
+            background: ${props => props.theme.colors.hover};
+            border-radius: 5px;
+          }
+          &.active:hover,
+          .active:focus {  
+          transition: all 0.3s ease-in-out 0s;
+          background: none;
+          }
         }
       }
-
-     
-    }
-
     }
   }
 

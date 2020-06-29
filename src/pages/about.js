@@ -6,8 +6,11 @@ function aboutPage() {
     return (
         <Layout>
         <div>
-            <h1>About me</h1>
-            <p>sdfsdfsdfdgdfgdfgdsgdfgdfgdfgd</p>
+            <article>
+                <h1>About me</h1>
+                <p>sdfsdfsdfdgdfgdfgdsgdfgdfgdfgd</p>
+            </article>
+            
         </div>
         </Layout>
     )
