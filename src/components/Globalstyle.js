@@ -751,26 +751,53 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   footer {
-    margin: 3rem 0;
+    margin-top: 3rem; 
+    padding: 3rem 0 2rem 0;
+    background: ${props => props.theme.colors.secondaryBackground};
+    width: 100%;
     color: ${props => props.theme.colors.textColor};
+    .footer-text {
+      text-align: center;
+      margin-bottom: 0rem;
+      margin-top: 1rem;
+      a {
+        font-size: 1rem;
+        text-decoration: underline;
+        font-weight: 700;
+      }
+    }
 
     .footer-container {
-      display: flex;
+      .footer-content {
+        h3 {
+          font-size: 2.5em;
+        }
+        p {
+          font-size: 1.25rem;
+          font-weight: 300;
+        }
+      }
       
-  
-      .footer-links  {
+      .footer-items {
         display: flex;
-  
-        li {
-          margin-left: 1.5rem;
-        
-          svg {
-            fill: ${props => props.theme.colors.iconColor};
-            transition: all 0.3s ease-in-out 0s;
-            
-            &:hover {
-              transform: scale(1.2);
-              fill: ${props => props.theme.colors.iconHover};
+        justify-content: space-between;
+        margin-top: 3rem;
+        align-items: center;
+        .footer-links  {
+          margin:0;
+          padding: 0;
+          display: flex;
+          li {
+            margin-left: 1.5rem;
+          
+            svg {
+              fill: ${props => props.theme.colors.iconColor};
+              transition: all 0.3s ease-in-out 0s;
+              
+              &:hover {
+                transform: scale(1.2);
+                fill: ${props => props.theme.colors.iconHover};
+              }
             }
           }
         }

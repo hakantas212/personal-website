@@ -5,8 +5,8 @@ import SEO from "../components/seo"
 import styled from 'styled-components'
 
 
-const Container = styled.div`
-  margin: 10rem;
+const TextWrapper = styled.div`
+  margin: 5rem;
 
   h1 {
     font-size: 2.75rem;
@@ -18,7 +18,7 @@ const Container = styled.div`
     font-weight: 600;
   }
 
-  span {
+  .hero-text {
     line-height: 1;
     font-size: 15rem;
     font-weight: 800;
@@ -39,12 +39,12 @@ const HomePage = () => (
 
   <Layout>
     <SEO title="Home" />
-    <Container>
-      <span>Welcome</span>
-      <h1>Hi, I'm Hakan</h1>
-      <h3>I’m a Stockholm based front-end developer, focused towards developing good looking websites with a primary focus on performance and future maintainability.</h3> 
+      <TextWrapper>
+        <span className="hero-text">Welcome</span>
+        <h1>Hi, I'm Hakan</h1>
+        <h3>I’m a Stockholm based front-end developer, focused towards developing good looking websites with a primary focus on performance and future maintainability.</h3>
+      </TextWrapper>
       <Skills></Skills>
-    </Container>
   </Layout>
 )
 
