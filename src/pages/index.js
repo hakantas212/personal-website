@@ -23,12 +23,12 @@ const TextWrapper = styled.div`
     font-size: 15rem;
     font-weight: 800;
     letter-spacing: 6px;
-    background: -webkit-linear-gradient(101deg, rgba(69,139,180,0.15) 0%, rgba(186,223,245,0.001) 100%);
+    background: -webkit-linear-gradient(101deg, rgba(69,139,180,0.1) 0%, rgba(186,223,245,0.001) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
-    left: 100px;
-    top: 350px;
+    left: 50px;
+    top: 220px;
     position: absolute;
     user-select: none;
   }

@@ -757,13 +757,24 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     color: ${props => props.theme.colors.textColor};
     .footer-text {
-      text-align: center;
+      text-align: right;
       margin-bottom: 0rem;
       margin-top: 1rem;
+      font-size: 0.75rem;
       a {
-        font-size: 1rem;
-        text-decoration: underline;
+        font-size: 0.75rem;
         font-weight: 700;
+        color: ${props => props.theme.colors.secondaryTextColor};
+        border-spacing: 10px;
+        text-indent: 15px;
+        line-height: 2em;
+        box-sizing:border-box;
+        padding-bottom: 4px;
+        border-bottom: 4px solid ${props => props.theme.colors.iconColor};
+        &:hover {
+          color: ${props => props.theme.colors.textColor};
+          transition: all 0.3s ease-in-out 0s;
+        }
       }
     }
 
