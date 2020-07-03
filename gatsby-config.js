@@ -65,5 +65,34 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-apiserver",
+      options: {
+        // Type prefix of entities from server
+        typePrefix: "internal__",
+  
+        // The url, this should be the endpoint you are attempting to pull data from
+        url: `https://api.unsplash.com/users/hakantas212/photos/?&per_page=50&client_id=${process.env.ACCESS_KEY}`,
+  
+        method: "GET",
+  
+        headers: {
+          "Content-Type": "application/json"
+        },
+
+        name: `UnsplashPhotos`,
+  
+        // Request body
+        data: {},
+        
+        // Request parameters
+        // Only available from version 2.1.0
+        params: {
+          per_page: 1,
+          stats: true
+        },
+  
+      }
+    }
   ],
 }

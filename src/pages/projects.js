@@ -5,10 +5,6 @@ import SEO from "../components/seo"
 
 
 
-
-
-
-
 const Projects = () => {
 
 const data = useStaticQuery(graphql`
