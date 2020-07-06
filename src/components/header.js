@@ -7,9 +7,13 @@ import Toggle from './toggle'
 const Inner = styled.div `
   max-width: 1280px;
   display: flex;
-  padding: 2rem 0;
+  padding: 2rem 0.75rem;
   align-items: center;
   margin: auto;
+  @media only screen and (max-width: 768px) {
+    padding: 2rem 2rem;
+  }
+  
 
   nav {
     border-top: none;
@@ -47,6 +51,11 @@ const Inner = styled.div `
           font-weight: 700;
           font-size: 1.1em;
           padding: 1rem;
+          @media only screen and (max-width: 768px) {
+            padding: 1rem;
+            font-size: 0.9rem;
+
+          }
 
           &.active {
             background: ${props => props.theme.colors.hover};

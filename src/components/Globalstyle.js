@@ -632,7 +632,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: ${props => props.theme.colors.background};
-    transition: background-color 0.4s ease 0s;
+    transition: background-color 0.3s ease 0s;
     color: ${props => props.theme.colors.textColor};
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
@@ -657,6 +657,10 @@ export const GlobalStyles = createGlobalStyle`
   section {
     max-width: 1280px;
     margin: auto;
+    padding: 0 0.75rem;
+    @media only screen and (max-width: 768px) {
+      padding: 0 1.75rem;
+    }
   }
 
   header {
@@ -667,6 +671,7 @@ export const GlobalStyles = createGlobalStyle`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap: 5rem;
+    padding-right: 0.75rem;
   }
 
   .card-project {
@@ -698,7 +703,9 @@ export const GlobalStyles = createGlobalStyle`
     .card-content {
       width: 100%;
       padding-left: 1rem;
-  
+      p {
+        color: ${props => props.theme.colors.secondaryTextColor};
+      }
   
       ul {
         list-style-type: none;

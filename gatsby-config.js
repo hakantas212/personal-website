@@ -23,10 +23,6 @@ module.exports = {
         "name": "photography",
         "link": "/photography"
       },
-      {
-        "name": "contact",
-        "link": "/contact"
-      }
     ]
   },
   plugins: [

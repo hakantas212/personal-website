@@ -6,24 +6,37 @@ import styled from 'styled-components'
 
 
 const AboutWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-  grid-gap: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: no-wrap;
+    @media only screen and (max-width: 1024px) {
+      flex-flow: column;
+      article {
+        order:2;
+      }
+      .image-wrapper {
+        margin: auto !important;
+    }
+  }
+  width: 100%;
     article {
       width: 100%;
       white-space: normal;
+      flex: 1 1 50%;
       
       p {
         margin-bottom: 50px;
         white-space: break-spaces;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: ${props => props.theme.colors.secondaryTextColor};
       }
     }
     
   .image-wrapper {
     width: 200px;
     height: 200px;
-    margin-top: 3rem;
+    margin: 3rem;
 
     img {
       width: 100%;
@@ -41,6 +54,7 @@ const About = () => {
       allContentfulAbout {
         edges {
           node {
+            id
             title
             about {
               about
@@ -62,8 +76,8 @@ const About = () => {
       <SEO title="Projects" />
             {data.allContentfulAbout.edges.map((edge) => { 
               return (
-                <AboutWrapper >
-                  <article>
+                <AboutWrapper key={edge.node.id} >
+                  <article >
                     <h1>{edge.node.title}</h1>
                     <p>{edge.node.about.about}</p>
                   </article>

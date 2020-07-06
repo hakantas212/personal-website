@@ -6,12 +6,17 @@ import styled from 'styled-components'
 
 const SkillsContainer = styled.div `
         margin-top: 10rem;
+
+        .skills-content {
+            max-width: 900px;
+        }
         h2 {
             font-size: 2.5rem;
         }
         p {
             font-weight: 300;
             font-size: 1.5rem;
+            color: ${props => props.theme.colors.secondaryTextColor};
         }
         ul {
             display: flex;
@@ -66,8 +71,10 @@ return (
         {data.allContentfulSkills.edges.map((skills) => {
             return (
                 <div key={skills.node.id}>
-                    <h2>{skills.node.title}</h2>
-                    <p>{skills.node.subtitle}</p>
+                    <div className="skills-content">
+                        <h2>{skills.node.title}</h2>
+                        <p>{skills.node.subtitle}</p>
+                    </div>
                     <ul>
                     {skills.node.skillLogo.map((image, i) => {
                         return (

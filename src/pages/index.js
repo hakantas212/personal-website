@@ -6,16 +6,26 @@ import styled from 'styled-components'
 
 
 const TextWrapper = styled.div`
-  margin: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  max-width: 750px;
+  width: 100%;
 
   h1 {
-    font-size: 2.75rem;
+    font-size: 3rem;
+    @media only screen and (max-width: 768px) {
+     font-size: 2.5rem;
+    }
   }
 
-  h3 {
-    font-size: 1.75rem;
+  p {
+    font-size: 2rem;
     color: ${props => props.theme.colors.secondaryTextColor};
-    font-weight: 600;
+    font-weight: 500;
+    @media only screen and (max-width: 768px) {
+      font-size: 1.5rem;
+     }
   }
 
   .hero-text {
@@ -26,7 +36,6 @@ const TextWrapper = styled.div`
     background: -webkit-linear-gradient(101deg, rgba(69,139,180,0.1) 0%, rgba(186,223,245,0.001) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
     left: 50px;
     top: 220px;
     position: absolute;
@@ -42,7 +51,7 @@ const HomePage = () => (
       <TextWrapper>
         <span className="hero-text">Welcome</span>
         <h1>Hi, I'm Hakan</h1>
-        <h3>I’m a Stockholm based front-end developer, focused towards developing good looking websites with a primary focus on performance and future maintainability.</h3>
+        <p>I’m a Stockholm based front-end developer, focused towards developing good looking websites with a primary focus on performance and future maintainability.</p>
       </TextWrapper>
       <Skills></Skills>
   </Layout>
