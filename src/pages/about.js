@@ -29,7 +29,6 @@ const AboutWrapper = styled.div`
         white-space: break-spaces;
         font-size: 1.25rem;
         font-weight: 400;
-        color: ${props => props.theme.colors.secondaryTextColor};
       }
     }
     

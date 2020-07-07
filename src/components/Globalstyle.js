@@ -670,7 +670,7 @@ export const GlobalStyles = createGlobalStyle`
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-    gap: 5rem;
+    gap: 4rem;
     padding-right: 0.75rem;
   }
 
