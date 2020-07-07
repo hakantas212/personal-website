@@ -22,6 +22,7 @@ const TextWrapper = styled.div`
   p {
     font-size: 2rem;
     color: ${props => props.theme.colors.secondaryTextColor};
+    background-color: ${props => props.theme.colors.background};
     font-weight: 500;
     @media only screen and (max-width: 768px) {
       font-size: 1.5rem;
