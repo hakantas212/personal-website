@@ -10,8 +10,10 @@ const Inner = styled.div `
   padding: 2rem 0.75rem;
   align-items: center;
   margin: auto;
-  @media only screen and (max-width: 768px) {
-    padding: 2rem 2rem;
+  @media only screen and (max-width: 568px) {
+    padding: 1.75rem 1.75rem;
+    flex-flow: wrap;
+    justify-content: center;
   }
   
 
@@ -21,6 +23,11 @@ const Inner = styled.div `
     display: flex;
     position: relative;
     flex: 1 1 0%;
+    @media only screen and (max-width: 568px) {
+      order: 3;
+      margin-top: 1rem;
+      }
+
 
     ul {
       display: flex;
@@ -31,6 +38,9 @@ const Inner = styled.div `
       list-style: none;
       position: relative;
       width: 100%;
+      @media only screen and (max-width: 568px) {
+      flex-flow: nowrap;
+      }
 
     li {
       display: flex;
@@ -51,10 +61,8 @@ const Inner = styled.div `
           font-weight: 700;
           font-size: 1.1em;
           padding: 1rem;
-          @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 568px) {
             padding: 1rem;
-            font-size: 0.9rem;
-
           }
 
           &.active {
@@ -78,6 +86,13 @@ const BrandLogo = styled.div`
     margin-left: 0;
     width: 60px;
     height:60px;
+    @media only screen and (max-width: 568px) {
+      width: 40px;
+      height:40px;
+      align-self: flex-end;
+      flex: 1;
+    }
+    
 `;
 
 const Header = ({isDark, setIsDark, menuLinks}) => (

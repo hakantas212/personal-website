@@ -635,6 +635,11 @@ export const GlobalStyles = createGlobalStyle`
     transition: background-color 0.3s ease 0s;
     color: ${props => props.theme.colors.textColor};
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
 

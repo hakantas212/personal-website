@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 
 const SkillsContainer = styled.div `
-        margin-top: 10rem;
+        margin-top: 1rem;
 
         .skills-content {
             max-width: 900px;

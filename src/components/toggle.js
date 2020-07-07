@@ -8,12 +8,14 @@ const Button = styled.button`
     width: 75px;
     height: 30px;
     border-radius: 30px;
-    box-sizing: border-box;
     background: ${props => props.theme.colors.gradient};
     border: none;
     cursor: pointer;
     outline: none;
     margin-left: 1rem;
+    @media only screen and (max-width: 768px) {
+      margin-left: 0.75rem;
+    }
 
     img {
       max-width: 1.4rem;
