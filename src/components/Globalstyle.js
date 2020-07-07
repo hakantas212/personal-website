@@ -633,7 +633,6 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${props => props.theme.colors.background};
     transition: background-color 0.3s ease 0s;
-    color: ${props => props.theme.colors.textColor};
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
 
