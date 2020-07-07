@@ -10,7 +10,8 @@ const Inner = styled.div `
   padding: 2rem 0.75rem;
   align-items: center;
   margin: auto;
-  @media only screen and (max-width: 568px) {
+  width: 100%;
+  @media only screen and (max-width: 768px) {
     padding: 1.75rem 1.75rem;
     flex-flow: wrap;
     justify-content: center;
@@ -22,8 +23,8 @@ const Inner = styled.div `
     background: transparent;
     display: flex;
     position: relative;
-    flex: 1 1 0%;
-    @media only screen and (max-width: 568px) {
+    width: 100%;
+    @media only screen and (max-width: 768px) {
       order: 3;
       margin-top: 1rem;
       }
@@ -32,20 +33,18 @@ const Inner = styled.div `
     ul {
       display: flex;
       justify-content: flex-end;
-      margin: 0;
-      padding: 0;
       flex-wrap: wrap;
       list-style: none;
       position: relative;
+      margin-bottom: 0;
       width: 100%;
-      @media only screen and (max-width: 568px) {
+      @media only screen and (max-width: 768px) {
       flex-flow: nowrap;
+      padding: 1rem 0;
+      justify-content: center;
       }
 
     li {
-      display: flex;
-      align-items: start;
-      align-content: center;
       border-radius: 5px;
       margin: 0.4rem;
       :hover {
@@ -61,7 +60,7 @@ const Inner = styled.div `
           font-weight: 700;
           font-size: 1.1em;
           padding: 1rem;
-          @media only screen and (max-width: 568px) {
+          @media only screen and (max-width: 768px) {
             padding: 1rem;
           }
 
@@ -86,7 +85,8 @@ const BrandLogo = styled.div`
     margin-left: 0;
     width: 60px;
     height:60px;
-    @media only screen and (max-width: 568px) {
+    min-width: 40px;
+    @media only screen and (max-width: 768px) {
       width: 40px;
       height:40px;
       align-self: flex-end;

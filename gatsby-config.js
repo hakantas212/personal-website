@@ -12,15 +12,15 @@ module.exports = {
     author: `Hakan Tas`,
     "menuLinks": [
       {
-        "name": "about",
+        "name": "About",
         "link": "/about"
       },
       {
-        "name": "projects",
+        "name": "Projects",
         "link": "/projects"
       },
       {
-        "name": "photography",
+        "name": "Photography",
         "link": "/photography"
       },
     ]

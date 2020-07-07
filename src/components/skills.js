@@ -24,6 +24,13 @@ const SkillsContainer = styled.div `
             margin-top: 3rem;
             flex-wrap: wrap;
             justify-content: center;
+            @media only screen and (max-width: 768px) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+
         li {
             line-height: 1.6;
             position: relative;
