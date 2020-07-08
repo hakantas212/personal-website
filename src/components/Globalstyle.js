@@ -13,7 +13,6 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-text-size-adjust: 100%;
     margin: 0; 
     height: 100%; 
-    overflow: hidden;
   }
 
 
@@ -640,7 +639,6 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
-    overflow: hidden;
     margin: 0;
   }
 
@@ -671,8 +669,10 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 1280px;
     margin: auto;
     padding: 0 0.75rem;
+    position: relative;
     @media only screen and (max-width: 768px) {
       padding: 0 1.75rem;
+      
     }
   }
 
@@ -685,7 +685,6 @@ export const GlobalStyles = createGlobalStyle`
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap: 4rem;
     padding-right: 0.75rem;
-    z-index: -1;
     position: relative;
   }
 

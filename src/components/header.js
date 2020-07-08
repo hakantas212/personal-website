@@ -11,6 +11,8 @@ const Inner = styled.div `
   padding: 2rem 0.75rem;
   margin: auto;
   width: 100%;
+  z-index: 9999;
+  position: relative;
   align-items: center;
   @media only screen and (max-width: 768px) {
     padding: 1.75rem 1.75rem;
@@ -19,8 +21,6 @@ const Inner = styled.div `
   }
   
   nav {
-    border-top: none;
-    background: transparent;
     display: flex;
     position: relative;
     width: 100%;
@@ -64,7 +64,6 @@ const MenuToggle = styled.div`
 const Navbox = styled.div`
   display: flex;
   height: 100%;
-  z-index: 9999;
     @media (max-width: 768px) {
       position: fixed;
       width: 50%;

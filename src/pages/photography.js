@@ -11,8 +11,6 @@ const Container = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(min(27rem, 100%), 1fr));
     grid-auto-rows: 33rem;
     width: 100%;
-    z-index: -1;
-    position: relative;
 
 `
 const ImageContainer = styled.div`
