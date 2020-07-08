@@ -656,6 +656,10 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  p {
+    color: ${props => props.theme.colors.secondaryTextColor};
+  }
+
   #logo {
     background-image: url(${props => props.theme.logo});
     width: 100%;
