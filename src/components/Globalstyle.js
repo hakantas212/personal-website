@@ -668,12 +668,8 @@ export const GlobalStyles = createGlobalStyle`
   section {
     max-width: 1280px;
     margin: auto;
-    padding: 0 0.75rem;
+    padding: 0 1rem;
     position: relative;
-    @media only screen and (max-width: 768px) {
-      padding: 0 1.75rem;
-      
-    }
   }
 
   header {
@@ -777,13 +773,18 @@ export const GlobalStyles = createGlobalStyle`
     background: ${props => props.theme.colors.secondaryBackground};
     width: 100%;
     color: ${props => props.theme.colors.textColor};
+    a {
+      font-size: 1.1rem;
+      color: ${props => props.theme.colors.textColor};
+      text-decoration: underline;
+    }
     .footer-text {
       text-align: right;
       margin-bottom: 0rem;
       margin-top: 1rem;
-      font-size: 0.75rem;
       a {
         font-size: 0.75rem;
+        text-decoration: none;
         font-weight: 700;
         color: ${props => props.theme.colors.secondaryTextColor};
         border-spacing: 10px;

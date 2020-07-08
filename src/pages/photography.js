@@ -83,17 +83,16 @@ const photoData = useStaticQuery(graphql`
             <h5>Here are some photographs that I shot, you can find them on Unsplash.com</h5>
             <Container>
                 {photoData.allInternalUnsplashPhotos.edges.map((edge) => {
-                    console.log(edge)
                     return (
                         <ImageContainer key={edge.node.id}>
                             <img src={edge.node.urls.regular} alt=""></img>
-                            <div className="overlay">
+                            {/* <div className="overlay">
                                 <div className="text">
                                     <span>{edge.node.description}</span>
                                     <span>{edge.node.statistics.downloads.total}</span>
                                     <span>{edge.node.statistics.views.total}</span>
                                 </div>
-                            </div>
+                            </div> */}
                         </ImageContainer>
                     )
                 })}

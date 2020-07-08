@@ -10,7 +10,7 @@ const TextWrapper = styled.div`
   margin-right: auto;
   margin-top: 5rem;
   width: 750px;
-  height: 400px;
+  height: 320px;
   max-width: 100%;
   display: block;
   @media only screen and (max-width: 768px) {
@@ -57,8 +57,8 @@ const HomePage = () => (
   <Layout>
     <SEO title="Home" />
       <TextWrapper>
-        <h1>Hi, I'm Hakan</h1>
-        <p>I’m a Stockholm based front-end developer, focused towards developing good looking websites with a primary focus on performance and future maintainability.</p>
+        <h1>Hi, I'm Hakan.</h1>
+        <p>I’m a creative front-end developer based in Stockholm, Sweden. I have a passion for clean UI, responsive Web design and photography.</p>
         <span className="hero-text">Welcome</span>
       </TextWrapper>
       <Skills></Skills>

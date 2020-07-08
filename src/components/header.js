@@ -8,14 +8,13 @@ import Navbar from "./navbar"
 const Inner = styled.div `
   max-width: 1280px;
   display: flex;
-  padding: 2rem 0.75rem;
+  padding: 2rem 1rem;
   margin: auto;
   width: 100%;
   z-index: 9999;
   position: relative;
   align-items: center;
   @media only screen and (max-width: 768px) {
-    padding: 1.75rem 1.75rem;
     justify-content: space-between;
 
   }
@@ -55,7 +54,6 @@ const MenuToggle = styled.div`
   @media (max-width: 768px) {
     display: flex;
     order: 3;
-    width: 10%;
     position: relative;
     margin: 0;
     padding: 0;

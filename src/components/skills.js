@@ -28,6 +28,7 @@ const SkillsContainer = styled.div `
                 flex-direction: row;
                 flex-wrap: wrap;
                 width: 100%;
+                justify-content: space-between;
             }
 
 
@@ -44,6 +45,10 @@ const SkillsContainer = styled.div `
             img {
                 height: 45px;
                 margin-right: 0.4rem;
+            }
+            @media only screen and (max-width: 768px) {
+                margin: 0.75rem 0.7rem;
+                padding: 0;
             }
     }
 
