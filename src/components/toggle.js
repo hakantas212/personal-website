@@ -5,7 +5,7 @@ import Moon from '../images/moon.svg'
 import Sun from '../images/sun.svg'
 
 const Button = styled.button`
-    width: 75px;
+    width: 80px;
     height: 30px;
     border-radius: 30px;
     background: ${props => props.theme.colors.gradient};
@@ -14,7 +14,7 @@ const Button = styled.button`
     outline: none;
     margin-left: 1rem;
     @media only screen and (max-width: 768px) {
-      margin-left: 0.75rem;
+      margin-left: 0;
     }
 
     img {

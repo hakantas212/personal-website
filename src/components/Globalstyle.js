@@ -640,7 +640,13 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
     overflow: hidden;
+    position: ${props => (props.noScroll ? "fixed" : "")};
   }
+
+  body.noscroll {
+    position:fixed;
+    overflow:hidden;
+}
 
 
   a {
@@ -677,6 +683,8 @@ export const GlobalStyles = createGlobalStyle`
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap: 4rem;
     padding-right: 0.75rem;
+    z-index: -1;
+    position: relative;
   }
 
   .card-project {

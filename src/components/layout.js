@@ -10,8 +10,10 @@ import Footer from './footer';
 
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, setNavBar }) => {
+
   let localIsDark
+  const [isDark, setIsDark] = useState(localIsDark)
 
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('isDark') === 'false') {
@@ -21,11 +23,7 @@ const Layout = ({ children }) => {
     }
   }
 
-  const [isDark, setIsDark] = useState(localIsDark)
-
-
-
-
+  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -46,7 +44,7 @@ const Layout = ({ children }) => {
     <>
     <GlobalStyles/>
       <div>
-        <Header menuLinks={data.site.siteMetadata.menuLinks}  siteTitle={data.site.siteMetadata.title} isDark={isDark} setIsDark={setIsDark}>
+        <Header siteTitle={data.site.siteMetadata.title} isDark={isDark} setIsDark={setIsDark}>
         </Header>
         <main>
           <section>
