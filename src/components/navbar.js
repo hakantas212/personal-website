@@ -14,7 +14,7 @@ const NavLinks = styled.div`
     width: 100%;
     @media only screen and (max-width: 768px) {
     flex-flow: nowrap;
-    padding: 1rem 0;
+    padding: 4rem 0;
     justify-content: center;
     flex-direction: column;
     align-items: center;

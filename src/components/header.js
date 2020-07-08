@@ -49,6 +49,8 @@ const MenuToggle = styled.div`
   height: 100%;
   cursor: pointer;
   padding: 0 10vw;
+  z-index: 4444;
+  position: relative;
 
   @media (max-width: 768px) {
     display: flex;
@@ -70,7 +72,7 @@ const Navbox = styled.div`
       padding-top: 2vh;
       background-color: ${props => props.theme.colors.background};
       transition: all 0.3s ease-in;
-      top: 10vh;
+      top: 0;
       right: ${props => (props.open ? "-100%" : "0")};
       justify-content: center;
       box-shadow: -11px 3px 24px -15px rgba(0,0,0,0.35);
