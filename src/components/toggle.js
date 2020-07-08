@@ -39,6 +39,7 @@ const Toggle = ({ isDark, setIsDark }) => {
   function handleClick() {
     localStorage.setItem('isDark', !isDark);
     setIsDark(!isDark);
+
   }
     return (
       <Button onClick={handleClick}>
