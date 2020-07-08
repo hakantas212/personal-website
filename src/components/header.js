@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components'
 import Toggle from './toggle'
-import Navbar from "./Navbar"
+import Navbar from "./navbar"
 
 const Inner = styled.div `
   max-width: 1280px;
@@ -115,7 +115,7 @@ const Header = ({isDark, setIsDark}) => {
     if (navBar === true) {
       document.body.classList.add('noscroll');
     }
-    
+
     return function cleanup() {
       document.body.classList.remove('noscroll');
     };
