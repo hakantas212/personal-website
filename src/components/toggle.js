@@ -13,6 +13,7 @@ const Button = styled.button`
     cursor: pointer;
     outline: none;
     margin-left: 1rem;
+    z-index: -1;
     @media only screen and (max-width: 768px) {
       margin-left: 0;
     }
@@ -37,7 +38,7 @@ const Button = styled.button`
 
 const Toggle = ({ isDark, setIsDark }) => {
   function handleClick() {
-    localStorage.setItem('isDark', !isDark);
+    localStorage.setItem('isDark', isDark);
     setIsDark(!isDark);
 
   }

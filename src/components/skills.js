@@ -16,7 +16,6 @@ const SkillsContainer = styled.div `
         p {
             font-weight: 300;
             font-size: 1.5rem;
-            color: ${props => props.theme.colors.secondaryTextColor};
         }
         ul {
             display: flex;
@@ -41,7 +40,6 @@ const SkillsContainer = styled.div `
             padding: 0 1rem;
             align-items: center;
             flex-direction: row-reverse;
-            color: ${props => props.theme.colors.secondaryTextColor};
             img {
                 height: 45px;
                 margin-right: 0.4rem;
@@ -78,7 +76,7 @@ function Skills() {
     `)
 
 return ( 
-    <SkillsContainer>
+    <SkillsContainer className="skills-container">
         <SEO title="Skills" />  
         {data.allContentfulSkills.edges.map((skills) => {
             return (

@@ -64,7 +64,7 @@ const Navbox = styled.div`
   height: 100%;
     @media (max-width: 768px) {
       position: fixed;
-      width: 50%;
+      width: 70%;
       display: flex;
       padding-top: 2vh;
       background-color: ${props => props.theme.colors.background};

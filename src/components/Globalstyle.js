@@ -651,7 +651,7 @@ export const GlobalStyles = createGlobalStyle`
 
 
   a {
-    color: ${props => props.theme.colors.textColor};
+    color: ${props => props.theme.colors.secondaryTextColor};
     font-size: 2em;
     text-decoration: none;
   }
@@ -679,6 +679,13 @@ export const GlobalStyles = createGlobalStyle`
 
   header {
     width: 100%;
+  }
+
+  .skills-container {
+    p, span, li {
+      color: ${props => props.theme.colors.secondaryTextColor};
+
+    }
   }
 
   .projects {
@@ -774,7 +781,9 @@ export const GlobalStyles = createGlobalStyle`
 
   footer {
     margin-top: 3rem; 
-    padding: 3rem 0 2rem 0;
+    padding: 2rem;
+    height: 400px;
+    margin-bottom: 0;
     background: ${props => props.theme.colors.secondaryBackground};
     width: 100%;
     color: ${props => props.theme.colors.textColor};

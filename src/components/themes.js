@@ -12,7 +12,7 @@ export const lightTheme = {
     hover: 'rgba(249, 139, 59, 0.2)',
     labelColor: 'rgba(249, 139, 59, 0.2)',
     secondaryBackground: 'rgba(186, 223, 245, 0.17)',
-    secondaryTextColor: '#334259',
+    secondaryTextColor: '#3e476b',
     borderColor: 'rgba(249, 139, 59, 0.2)',
     gradient: 'linear-gradient(101deg, rgba(69,139,180,1) 0%, rgba(186,223,245,1) 100%)',
     iconColor: 'rgba(119, 124, 155, 1)',
