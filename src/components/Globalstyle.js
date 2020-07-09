@@ -649,7 +649,6 @@ export const GlobalStyles = createGlobalStyle`
     overflow: hidden;
 }
 
-
   a {
     color: ${props => props.theme.colors.secondaryTextColor};
     font-size: 2em;
@@ -667,7 +666,7 @@ export const GlobalStyles = createGlobalStyle`
     position: relative;
     display: block;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: round;
   }
 
   section {

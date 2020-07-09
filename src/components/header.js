@@ -57,18 +57,22 @@ const MenuToggle = styled.div`
     position: relative;
     margin: 0;
     padding: 0;
+    width: 30px;
+    height: 30px;
   }
 `
 const Navbox = styled.div`
   display: flex;
   height: 100%;
+
     @media (max-width: 768px) {
       position: fixed;
-      width: 70%;
+      width: 60%;
       display: flex;
       padding-top: 2vh;
       background-color: ${props => props.theme.colors.background};
       transition: all 0.3s ease-in;
+      border-left: 1px solid ${props => props.theme.colors.background};
       top: 0;
       right: ${props => (props.open ? "-100%" : "0")};
       justify-content: center;

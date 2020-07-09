@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 const NavLinks = styled.div`
+  width: 100%;
   ul {
     display: flex;
     justify-content: flex-end;
@@ -17,7 +18,8 @@ const NavLinks = styled.div`
     padding: 4rem 0;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    padding-right: 1rem;
     }
 
   li {

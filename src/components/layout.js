@@ -13,15 +13,18 @@ import Footer from './footer';
 const Layout = ({ children }) => {
 
   let localIsDark
+
   if (typeof window !== 'undefined') {
-    if (window.localStorage.getItem('isDark') === 'false') {
+    if (localStorage.getItem('isDark') === 'false') {
       localIsDark = false
     } else {
       localIsDark = true
     }
-    // console.log(localIsDark ? 'dark mode' : 'light mode')
+    console.log(localIsDark ? 'dark mode' : 'light mode')
   }
-  const [isDark, setIsDark] = useState()
+
+  const [isDark, setIsDark] = useState(localIsDark)
+
 
   
   const data = useStaticQuery(graphql`
