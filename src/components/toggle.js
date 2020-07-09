@@ -1,6 +1,6 @@
 import React  from 'react';
 import styled from 'styled-components';
-import { lightTheme } from './themes';
+import { lightTheme, darkTheme } from './themes';
 import Moon from '../images/moon.svg'
 import Sun from '../images/sun.svg'
 
@@ -28,7 +28,7 @@ const Button = styled.button`
       }
   
       &:nth-child(2) {
-        transform: ${props => props.theme === lightTheme  ? 'translateX(30)' : 'translateX(10)'};
+        transform: ${props => props.theme === darkTheme  ? 'translateX(30)' : 'translateX(10)'};
       }
     }
 
