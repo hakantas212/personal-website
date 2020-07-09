@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
 
   let localIsDark
   if (typeof window !== 'undefined') {
-    if (localStorage.getItem('isDark') === 'false') {
+    if (window.localStorage.getItem('isDark') === 'false') {
       localIsDark = false
     } else {
       localIsDark = true

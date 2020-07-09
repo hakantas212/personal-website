@@ -38,7 +38,7 @@ const Button = styled.button`
 
 const Toggle = ({ isDark, setIsDark }) => {
   function handleClick() {
-    localStorage.setItem('isDark', isDark);
+    localStorage.setItem('isDark', !isDark);
     setIsDark(!isDark);
 
   }
