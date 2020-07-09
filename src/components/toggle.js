@@ -1,6 +1,5 @@
 import React  from 'react';
 import styled from 'styled-components';
-import { lightTheme, darkTheme } from './themes';
 import Moon from '../images/moon.svg'
 import Sun from '../images/sun.svg'
 
@@ -8,9 +7,9 @@ const Button = styled.button`
     width: 80px;
     height: 30px;
     border-radius: 30px;
-    background: ${props => props.theme.colors.gradient};
     border: none;
     cursor: pointer;
+    background-color:  ${props => props.theme.secondaryTextColor};
     outline: none;
     margin-left: 1rem;
     z-index: -1;
@@ -24,11 +23,11 @@ const Button = styled.button`
       transition: all 0.1s linear;
   
       &:first-child {
-        transform: ${props => props.theme === lightTheme  ? 'translateX(-20px)' : 'translateX(20px)'};
+        transform: ${props => props.theme === "light"  ? 'translateX(-20px)' : 'translateX(20px)'};
       }
   
       &:nth-child(2) {
-        transform: ${props => props.theme === darkTheme  ? 'translateX(30)' : 'translateX(10)'};
+        transform: ${props => props.theme === "dark"  ? 'translateX(30)' : 'translateX(10)'};
       }
     }
 
@@ -36,14 +35,11 @@ const Button = styled.button`
 
 
 
-const Toggle = ({ isDark, setIsDark }) => {
-  function handleClick() {
-    setIsDark(!isDark);
-    localStorage.setItem('isDark', !isDark);
-  }
+const Toggle = ({theme,  toggleTheme }) => {
+  
     return (
-      <Button onClick={handleClick}>
-         { isDark === true ? <img src={Moon} alt="Moon" title="Moon"/> :
+      <Button theme={ theme} onClick={toggleTheme}>
+         { theme === "dark" ? <img src={Moon} alt="Moon" title="Moon"/> :
           <img src={Sun} alt="Sun" title="Sun"/>
          } 
       </Button>

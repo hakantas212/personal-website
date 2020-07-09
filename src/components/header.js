@@ -111,8 +111,9 @@ const Hamburger = styled.div`
   }
 `
 
-const Header = ({isDark, setIsDark}) => {
+const Header = ({theme, toggleTheme }) => {
   const [navBar, setNavBar] = useState(false);
+
   
   useEffect(() => {
     if (navBar === true) {
@@ -146,7 +147,7 @@ return (
           </Navbox>
           )}
         </nav>
-        <Toggle isDark={isDark} setIsDark={setIsDark} />
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
       </Inner>
 
   </header>
