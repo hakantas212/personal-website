@@ -111,10 +111,9 @@ const Hamburger = styled.div`
   }
 `
 
-const Header = ({theme, toggleTheme }) => {
+const Header = ({isDarkMode, setIsDarkMode }) => {
   const [navBar, setNavBar] = useState(false);
 
-  
   useEffect(() => {
     if (navBar === true) {
       document.body.classList.add('noscroll');
@@ -147,7 +146,7 @@ return (
           </Navbox>
           )}
         </nav>
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       </Inner>
 
   </header>

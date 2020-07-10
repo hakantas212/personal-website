@@ -1,9 +1,8 @@
 
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import  {useDarkMode} from "./useDarkMode"
 import {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./Globalstyle";
 import { lightTheme, darkTheme } from "./themes"
@@ -12,12 +11,12 @@ import Footer from './footer';
 
 
 const Layout = ({ children }) => {
-  const [theme, themeToggler, mountedComponent] = useDarkMode();
-  
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
+  const stored = localStorage.getItem("isDarkMode");
+  const [isDarkMode, setIsDarkMode] = useState(
+    stored === "true" ? true : false
+  );
 
-  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,15 +31,14 @@ const Layout = ({ children }) => {
     }
   `)
 
-  if(!mountedComponent) return <div/>
 
 
   return (
-    <ThemeProvider theme={themeMode}>
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
     <>
     <GlobalStyles/>
       <div>
-        <Header siteTitle={data.site.siteMetadata.title} theme={theme} toggleTheme={themeToggler}>
+        <Header siteTitle={data.site.siteMetadata.title} setIsDarkMode={setIsDarkMode} isDarkMode={isDarkMode}>
         </Header>
         <main>
           <section>
