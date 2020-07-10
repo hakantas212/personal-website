@@ -11,8 +11,8 @@ import Footer from './footer';
 
 
 const Layout = ({ children }) => {
-
-  const stored = localStorage.getItem("isDarkMode", !isDarkMode);
+  const windowGlobal = typeof window !== 'undefined' && window
+  const stored = windowGlobal.localStorage.getItem("isDarkMode");
   const [isDarkMode, setIsDarkMode] = useState(
     stored === "true" ? true : false
   );
