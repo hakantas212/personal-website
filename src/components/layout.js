@@ -12,7 +12,7 @@ import Footer from './footer';
 
 const Layout = ({ children }) => {
 
-  let stored = window.localStorage.getItem("isDarkMode");
+  const stored = localStorage.getItem("isDarkMode", !isDarkMode);
   const [isDarkMode, setIsDarkMode] = useState(
     stored === "true" ? true : false
   );
