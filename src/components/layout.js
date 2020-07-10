@@ -1,27 +1,53 @@
 
-import React, {useState} from 'react'
+import React, {useState}  from 'react'
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import {ThemeProvider} from "styled-components";
+import styled, {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./Globalstyle";
 import { lightTheme, darkTheme } from "./themes"
 import Footer from './footer';
+import Moon from '../images/moon.svg'
+import Sun from '../images/sun.svg'
 
 
-
-const Layout = ({ children }) => {
-  let stored
-  if (typeof window !== 'undefined') {
-    if (stored === 'false') {
-      stored = false
-    } else {
-      stored = true
+const Button = styled.button`
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background:  ${props => props.theme.colors.gradient};
+    outline: none;
+    margin-left: 1rem;
+    z-index: -1;
+    @media only screen and (max-width: 768px) {
+      margin-left: 0;
     }
-    console.log(stored ? 'dark mode' : 'light mode')
-  }
+
+    img {
+      max-width: 1.4rem;
+      height: 100%;
+      transition: all 0.1s linear;
+  
+      &:first-child {
+        transform: ${props => props.theme === lightTheme  ? 'translateX(-20px)' : 'translateX(20px)'};
+      }
+  
+      &:nth-child(2) {
+        transform: ${props => props.theme === darkTheme  ? 'translateX(30)' : 'translateX(10)'};
+      }
+    }
+
+`;
+
+
+
+const Layout = ({ children}) => {
+
+  const stored = localStorage.getItem("isDarkMode");
   const [isDarkMode, setIsDarkMode] = useState(
-    stored
+    stored === "true" ? true : false
   );
 
   const data = useStaticQuery(graphql`
@@ -45,7 +71,16 @@ const Layout = ({ children }) => {
     <>
     <GlobalStyles/>
       <div>
-        <Header siteTitle={data.site.siteMetadata.title} setIsDarkMode={setIsDarkMode} isDarkMode={isDarkMode}>
+      <Button onClick={() => {
+          setIsDarkMode(!isDarkMode);
+          localStorage.setItem("isDarkMode", !isDarkMode);
+          console.log("hello")
+          }}>
+          { isDarkMode ? <img src={Moon} alt="Moon" title="Moon"/> :
+            <img src={Sun} alt="Sun" title="Sun"/>
+          } 
+      </Button>
+        <Header siteTitle={data.site.siteMetadata.title}>
         </Header>
         <main>
           <section>

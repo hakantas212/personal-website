@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components'
-import Toggle from './toggle'
 import Navbar from "./navbar"
 
 const Inner = styled.div `
@@ -111,7 +110,8 @@ const Hamburger = styled.div`
   }
 `
 
-const Header = ({isDarkMode, setIsDarkMode }) => {
+
+const Header = () => {
   const [navBar, setNavBar] = useState(false);
 
   useEffect(() => {
@@ -123,6 +123,8 @@ const Header = ({isDarkMode, setIsDarkMode }) => {
       document.body.classList.remove('noscroll');
     };
   }, [navBar]);
+
+
 
 
 return (
@@ -146,7 +148,7 @@ return (
           </Navbox>
           )}
         </nav>
-        <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+
       </Inner>
 
   </header>
