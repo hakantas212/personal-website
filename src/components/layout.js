@@ -44,7 +44,7 @@ const Button = styled.button`
 
 
 const Layout = ({ children}) => {
-
+  typeof window !== 'undefined' && window.localStorage
   const stored = localStorage.getItem("isDarkMode");
   const [isDarkMode, setIsDarkMode] = useState(
     stored === "true" ? true : false
