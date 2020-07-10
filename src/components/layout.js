@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
     console.log(stored ? 'dark mode' : 'light mode')
   }
   const [isDarkMode, setIsDarkMode] = useState(
-    stored === "true" ? true : false
+    stored
   );
 
   const data = useStaticQuery(graphql`
