@@ -7,6 +7,8 @@ import Sun from '../images/sun.svg'
 
 const ToggleTheme = styled.label`
     display: inline-flex;
+    width: 70px;
+    height: 30px;
     align-items: center;
     margin-left: 1rem;
     @media only screen and (max-width: 768px) {
@@ -72,7 +74,7 @@ const Toggle = () => {
   }
 
   return (
-    <ToggleTheme value={colorMode}>
+    <ToggleTheme>
         <input
         type="checkbox"
         checked={colorMode === 'dark'}
