@@ -74,7 +74,7 @@ const Toggle = () => {
   }
 
   return (
-    <ToggleTheme>
+    <ToggleTheme value={colorMode}>
         <input
         type="checkbox"
         checked={colorMode === 'dark'}
