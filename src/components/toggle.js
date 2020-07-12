@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeContext } from './ThemeContext';
+import { ThemeContext } from './themeContext';
 import styled  from 'styled-components'
 import Moon from '../images/moon.svg'
 import Sun from '../images/sun.svg'
