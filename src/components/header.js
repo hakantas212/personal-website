@@ -14,6 +14,16 @@ const Inner = styled.div `
   z-index: 9999;
   position: relative;
   align-items: center;
+  animation-duration: 3s;
+  animation-name: fade;
+  @keyframes fade {
+    %0 {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   @media only screen and (max-width: 768px) {
     justify-content: space-between;
 

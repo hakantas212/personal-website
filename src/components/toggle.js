@@ -10,10 +10,6 @@ const ToggleTheme = styled.label`
     width: 70px;
     height: 30px;
     align-items: center;
-    margin-left: 1rem;
-    @media only screen and (max-width: 768px) {
-      margin-left: 0;
-    }
 
     span {
       position: relative;
@@ -74,20 +70,22 @@ const Toggle = () => {
   }
 
   return (
-    <ToggleTheme value={colorMode}>
-        <input
-        type="checkbox"
-        checked={colorMode === 'dark'}
-        onChange={ev => {
-        setColorMode(ev.target.checked ? 'dark' : 'light');
-        }}
-       />
-        <div className="icon-wrapper">
-        <img src={Moon} alt="Moon" title="Moon"/>
-        <img src={Sun} alt="Sun" title="Sun"/>
-        </div>
-        <span></span>
-  </ToggleTheme>
+    <div>
+      <ToggleTheme value={colorMode}>
+          <input
+          type="checkbox"
+          checked={colorMode === 'dark'}
+          onChange={ev => {
+          setColorMode(ev.target.checked ? 'dark' : 'light');
+          }}
+        />
+          <div className="icon-wrapper">
+          <img src={Moon} alt="Moon" title="Moon"/>
+          <img src={Sun} alt="Sun" title="Sun"/>
+          </div>
+          <span></span>
+      </ToggleTheme>
+    </div>
   );
 };
 
