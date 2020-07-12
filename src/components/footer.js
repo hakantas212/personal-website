@@ -8,7 +8,7 @@ function Footer() {
                     <div className="footer-content">
                         <h3>Get in touch</h3>
                         <p>Feel free to contact me if you have an exciting project to work with, interested in hiring me or just want to talk.</p>
-                        <a href="mailto:hakan.tas@hyperisland.se">hakan.tas@hyperisland.se</a>
+                        <a href="mailto:hakantas212@gmail.com">hakantas212@gmail.com</a>
                     </div>
                     <div className="footer-items">
                         © {new Date().getFullYear()} &mdash; Hakan Tas

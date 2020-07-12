@@ -51,6 +51,7 @@ const GlobalStyles = createGlobalStyle`
     margin: auto;
     padding: 0 1rem;
     position: relative;
+    margin-top: 2rem;
   }
 
   header {
@@ -76,7 +77,7 @@ const GlobalStyles = createGlobalStyle`
     height: auto;
     position: relative;
     display: grid;
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows: 1fr 200px auto;
     border-radius: .25rem .25rem 1rem 1rem;
     background-color: var(--color-cardBackground);
     box-shadow: 10px -10px 0 var(--color-hover);
@@ -94,6 +95,7 @@ const GlobalStyles = createGlobalStyle`
       object-fit: cover;
       width: 100%;
       height: auto;
+      display: block;
       border-radius: .25rem .25rem 0rem 0rem;
     }
 
@@ -102,7 +104,9 @@ const GlobalStyles = createGlobalStyle`
       padding-left: 1rem;
 
       p{
-        color: var(--color-secondaryTextColor)
+        color: var(--color-secondaryTextColor);
+        line-height: 1.4rem;
+        padding-right: 0.5rem;
       }
   
       ul {
@@ -138,7 +142,7 @@ const GlobalStyles = createGlobalStyle`
       justify-content: flex-end;
 
       a {
-        margin: 1.75rem 1.40rem 1.75rem .75rem;
+        margin: 1.25rem 1.40rem 1.25rem .75rem;
         width: 30px;
         height: 30px;
 
@@ -226,7 +230,7 @@ const GlobalStyles = createGlobalStyle`
           margin: 1rem;
           }
           li {
-            margin-left: 1.5rem;
+            margin: 0.25rem 1rem;
           
             svg {
               transition: all 0.3s ease-in-out 0s;

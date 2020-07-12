@@ -46,7 +46,7 @@ const SkillsContainer = styled.div `
                 margin-right: 0.4rem;
             }
             @media only screen and (max-width: 768px) {
-                margin: 0.75rem 0.7rem;
+                margin: 0.75rem 1rem;
                 padding: 0;
             }
             @media only screen and (max-width: 568px) {

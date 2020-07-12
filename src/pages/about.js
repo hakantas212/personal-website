@@ -13,6 +13,7 @@ const AboutWrapper = styled.div`
       flex-flow: column;
       article {
         order:2;
+        margin: auto;
       }
       .image-wrapper {
         margin: auto !important;
@@ -21,8 +22,9 @@ const AboutWrapper = styled.div`
   width: 100%;
     article {
       width: 100%;
+      max-width: 700px;
       white-space: normal;
-      flex: 1 1 50%;
+      flex: 1 1 100%;
       
       p {
         margin-bottom: 50px;

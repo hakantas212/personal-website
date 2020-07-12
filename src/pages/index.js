@@ -18,6 +18,7 @@ const TextWrapper = styled.div`
 
   h1 {
     font-size: 3rem;
+    margin:0;
     @media only screen and (max-width: 768px) {
      font-size: 2.5rem;
     }
@@ -26,6 +27,7 @@ const TextWrapper = styled.div`
   p {
     font-size: 2rem;
     font-weight: 500;
+    margin-top: 1rem;
     @media only screen and (max-width: 768px) {
       font-size: 1.5rem;
      }
