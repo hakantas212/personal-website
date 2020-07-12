@@ -12,6 +12,7 @@ const NavLinks = styled.div`
     list-style: none;
     position: relative;
     margin-bottom: 0;
+    margin-top: 0;
     width: 100%;
     @media only screen and (max-width: 768px) {
     flex-flow: nowrap;
@@ -20,6 +21,7 @@ const NavLinks = styled.div`
     flex-direction: column;
     align-items: flex-end;
     padding-right: 1rem;
+    margin-top: 0;
     }
 
   li {
@@ -27,8 +29,8 @@ const NavLinks = styled.div`
     margin: 0.4rem;
     :hover {
       transition: all 0.3s ease-in-out 0s;
-      background-color: ${props => props.theme.colors.hover};
-      color: ${props => props.theme.colors.textColor};
+      background-color: var(--color-hover);
+      color: var(--color-textColor);
     }
 
       a {
@@ -43,9 +45,9 @@ const NavLinks = styled.div`
         }
 
         &.active {
-          background: ${props => props.theme.colors.hover};
           border-radius: 5px;
           font-weight: 700;
+          background: var(--color-hover);;
 
         }
         &.active:hover,
