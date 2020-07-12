@@ -31,9 +31,7 @@ const ToggleTheme = styled.label`
         opacity: 1;
         z-index: -1;
         position: relative;
-        background-color: var(--color-iconColor);
-        ${props => props.value === "light" && `background-color: var(--color-iconColor)`}
-      }
+        background-color: var(--color-iconColor);      }
       ::after {
         position: absolute;
         top: 50%;
@@ -87,7 +85,6 @@ const Toggle = () => {
         <img src={Sun} alt="Sun" title="Sun"/>
         </div>
         <span></span>
-        
   </ToggleTheme>
   );
 };

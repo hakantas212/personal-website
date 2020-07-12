@@ -40,29 +40,10 @@ const GlobalStyles = createGlobalStyle`
     overflow: hidden;
 }
 
-#logo {
-  background-image: url(var(--logo));
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: block;
-  background-size: contain;
-  background-repeat: round;
-}
 
   a {
     font-size: 2em;
     text-decoration: none;
-  }
-
-
-  #logo {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-    background-size: contain;
-    background-repeat: round;
   }
 
   section {
