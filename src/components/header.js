@@ -14,16 +14,6 @@ const Inner = styled.div `
   z-index: 9999;
   position: relative;
   align-items: center;
-  animation-duration: 3s;
-  animation-name: fade;
-  @keyframes fade {
-    %0 {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   @media only screen and (max-width: 768px) {
     justify-content: space-between;
 
@@ -78,7 +68,7 @@ const Navbox = styled.div`
 
     @media (max-width: 768px) {
       position: fixed;
-      width: 42%;
+      width: 50%;
       display: flex;
       padding-top: 2vh;
       transition: all 0.3s ease-in;
@@ -123,8 +113,12 @@ const Hamburger = styled.div`
 const Logo = styled.svg`
   flex: none;
   transition: fill 0.25s;
-  width: 100%;
-  height: 100%;
+  width: 60px;
+  height: 60px;
+  @media only screen and (max-width: 768px) {
+    width: 45px;
+    height:45px;
+  } 
 
   .st0 { 
     fill: var(--color-logoDark);

@@ -13,14 +13,13 @@ const NavLinks = styled.div`
     position: relative;
     margin-bottom: 0;
     margin-top: 0;
-    min-width: 500px;
+    margin-right: 1rem;
     @media only screen and (max-width: 768px) {
     flex-flow: nowrap;
     padding: 4rem 0;
     justify-content: center;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 1rem;
     margin-top: 0;
     }
 

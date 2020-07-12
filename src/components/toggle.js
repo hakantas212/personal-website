@@ -7,9 +7,10 @@ import Sun from '../images/sun.svg'
 
 const ToggleTheme = styled.label`
     display: inline-flex;
-    width: 70px;
+    width: 60px;
     height: 30px;
     align-items: center;
+    z-index: -1;
 
     span {
       position: relative;
@@ -50,11 +51,12 @@ const ToggleTheme = styled.label`
     .icon-wrapper {
       position: absolute;
       width: 4rem;
-      height: 1.4rem;
+      height: 1.3rem;
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
       img {
-        max-width: 1.4rem;
+        max-width: 1.3rem;
         height: 100%;
         position: relative;
       }
@@ -70,7 +72,6 @@ const Toggle = () => {
   }
 
   return (
-    <div>
       <ToggleTheme value={colorMode}>
           <input
           type="checkbox"
@@ -85,7 +86,6 @@ const Toggle = () => {
           </div>
           <span></span>
       </ToggleTheme>
-    </div>
   );
 };
 

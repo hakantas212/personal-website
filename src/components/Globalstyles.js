@@ -156,13 +156,17 @@ const GlobalStyles = createGlobalStyle`
   }
 
   footer {
-    margin-top: 3rem; 
+    margin-top: 5rem; 
     padding: 2rem;
-    height: 400px;
     margin-bottom: 0;
     background: var(--color-secondaryBackground);
     width: 100%;
     color: var(--color-textColor);
+    @media only screen and (max-width: 768px) {
+    padding:0;
+    padding-top:1rem;
+    text-align: center;
+    }
     a {
       font-size: 1.1rem;
       text-decoration: underline;
@@ -172,6 +176,9 @@ const GlobalStyles = createGlobalStyle`
       text-align: right;
       margin-bottom: 0rem;
       margin-top: 1rem;
+      @media only screen and (max-width: 768px) {
+        text-align: center;
+      }
       a {
         font-size: 0.75rem;
         text-decoration: none;
@@ -191,6 +198,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     .footer-container {
+      width: 100%;
       .footer-content {
         h3 {
           font-size: 2.5em;
@@ -206,11 +214,17 @@ const GlobalStyles = createGlobalStyle`
         justify-content: space-between;
         margin-top: 3rem;
         align-items: center;
+        @media only screen and (max-width: 768px) {
+          flex-direction: column-reverse;
+        }
         .footer-links  {
           margin:0;
           padding: 0;
           display: flex;
           list-style: none;
+          @media only screen and (max-width: 768px) {
+          margin: 1rem;
+          }
           li {
             margin-left: 1.5rem;
           
