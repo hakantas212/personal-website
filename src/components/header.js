@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
-import { ThemeContext } from './themeContext';
 import styled  from 'styled-components'
 import Navbar from "./navbar"
 import Toggle from "./toggle"
@@ -127,7 +126,6 @@ const Logo = styled.svg`
 
 const Header = () => {
   const [navBar, setNavBar] = useState(false);
-  const { colorMode } = React.useContext(ThemeContext);
 
 
 
