@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     background: var(--color-background);
     color: var(--color-textColor);
     transition: background-color 0.3s ease 0s;
-    font-family: 'Inter', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter','Archivo', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -30,16 +30,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     overflow: hidden;
   }
-
-  @keyframes fadein {
-    from { 
-      opacity: 0; 
-    }
-    to { 
-      opacity: 1;
-    }
-  }
-
 
   a {
     color: var(--color-textColor);
@@ -68,7 +58,6 @@ const GlobalStyles = createGlobalStyle`
     padding: 0 1rem;
     position: relative;
     margin-top: 2rem;
-    animation: fadein 2s;
   }
 
   header {
