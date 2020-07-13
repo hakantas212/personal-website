@@ -18,6 +18,7 @@ const TextWrapper = styled.div`
   h1 {
     font-size: 3rem;
     margin:0;
+    font-family: 'Inter', sans-serif;
     @media only screen and (max-width: 768px) {
      font-size: 2.5rem;
     }

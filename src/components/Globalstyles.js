@@ -37,7 +37,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    font-family: 'Archivo';
+    font-family: 'Archivo', sans-serif;
   }
 
   body.noscroll {

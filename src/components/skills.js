@@ -12,6 +12,7 @@ const SkillsContainer = styled.div `
         }
         h2 {
             font-size: 2.5rem;
+            font-family: 'Inter', sans-serif;
         }
         p {
             font-weight: 500;
