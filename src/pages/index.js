@@ -13,8 +13,7 @@ const TextWrapper = styled.div`
   height: 320px;
   max-width: 100%;
   display: block;
-  @media only screen and (max-width: 768px) {
-   }
+
 
   h1 {
     font-size: 3rem;

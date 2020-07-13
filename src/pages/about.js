@@ -25,6 +25,10 @@ const AboutWrapper = styled.div`
       max-width: 700px;
       white-space: normal;
       flex: 1 1 100%;
+
+      h1 {
+        font-size: 1.7rem;
+      }
       
       p {
         margin-bottom: 50px;
@@ -74,7 +78,7 @@ const About = () => {
 
     return (
       <Layout>
-      <SEO title="Projects" />
+      <SEO title="About" />
             {data.allContentfulAbout.edges.map((edge) => { 
               return (
                 <AboutWrapper key={edge.node.id} >

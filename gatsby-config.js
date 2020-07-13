@@ -58,9 +58,35 @@ module.exports = {
         icon: `src/images/logo-light.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-172481986-1`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Archivo`,
+            variants: [`400`,`500`, `700`, `900`]
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`,`500`, `700`, `900`]
+          },
+          {
+            family: `Fira Sans`,
+            variants: [`400`,`500`, `700`, `900`]
+          },
+          {
+            family: `Inter`,
+            variants: [`400`,`500`,`600`, `700`, `900`]
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-source-apiserver",
       options: {

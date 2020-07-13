@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from "../components/layout"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
+import SEO from "../components/seo"
 
 
 
@@ -12,6 +13,27 @@ const Container = styled.div`
     grid-auto-rows: 33rem;
     width: 100%;
 
+`
+const TextWrapper = styled.div`
+    margin: 2.75rem 0;
+    width: 750px;
+    max-width: 100%;
+    display: block;
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    a {
+        font-size: 1rem;
+        font-weight: 700;
+        border-bottom: 3px solid var(--color-iconColor);
+        line-height: 2rem;
+    }
+
+    h3 {
+        font-weight: 500;
+    }
 `
 const ImageContainer = styled.div`
     position: relative;
@@ -79,8 +101,13 @@ const photoData = useStaticQuery(graphql`
 
     return (
         <Layout>
-            <h1>My Photographs</h1>
-            <h5>Here are some photographs that I shot, you can find them on Unsplash.com</h5>
+            <SEO title="Photography" />
+            <TextWrapper>
+                <h1>My Photography Journey</h1>
+                <p>I have always been curious about technical deteails/post processing of an image, while I enjoy taking landscape & travel photos.
+                I use <a href="https://unsplash.com/@hakantas212" target="_blank" rel="noreferrer">Unsplash</a> Community for my photographs, you can find more information such as focal length, camera, aperture and so on. </p>
+                <h3>📷 Sony A7R II</h3>
+            </TextWrapper>
             <Container>
                 {photoData.allInternalUnsplashPhotos.edges.map((edge) => {
                     return (

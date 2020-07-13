@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     background: var(--color-background);
     color: var(--color-textColor);
     transition: background-color 0.3s ease 0s;
-    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,6 +32,11 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     color: var(--color-textColor);
+    letter-spacing: 0.02rem;
+  }
+
+  p {
+    font-family: 'Archivo';
   }
 
   body.noscroll {
@@ -192,6 +197,7 @@ const GlobalStyles = createGlobalStyle`
         text-indent: 15px;
         line-height: 2em;
         box-sizing:border-box;
+        letter-spacing: 0.06rem;
         padding-bottom: 4px;
         border-bottom: 4px solid var(--color-iconColor);
         &:hover {
