@@ -30,6 +30,17 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     overflow: hidden;
   }
+
+  @keyframes fadein {
+    from { 
+      opacity: 0; 
+    }
+    to { 
+      opacity: 1;
+    }
+  }
+
+
   a {
     color: var(--color-textColor);
     letter-spacing: 0.02rem;
@@ -57,6 +68,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0 1rem;
     position: relative;
     margin-top: 2rem;
+    animation: fadein 2s;
   }
 
   header {
