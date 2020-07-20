@@ -41,8 +41,8 @@ const TextWrapper = styled.div`
     background: -webkit-linear-gradient(101deg, rgba(69,139,180,0.1) 0%, rgba(186,223,245,0.001) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    left: -250px;
-    top: -200px;
+    left: -450px;
+    top: -190px;
     position: relative;
     display: inline-block;
     user-select: none;

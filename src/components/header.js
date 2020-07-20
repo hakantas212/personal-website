@@ -36,10 +36,10 @@ const Home = styled(Link)`
     margin-left: 0;
     width: 60px;
     height:60px;
-    min-width: 60px;
     @media only screen and (max-width: 768px) {
-      width: 45px;
       height:45px;
+      max-width: 45px;
+
     } 
 `
 
