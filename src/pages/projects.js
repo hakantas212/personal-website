@@ -9,7 +9,7 @@ const Projects = () => {
 
 const data = useStaticQuery(graphql`
   query {
-    allContentfulProject {
+    allContentfulProject (filter: {node_locale: {eq: "en"}}) {
       edges{
         node {
           id
@@ -18,8 +18,8 @@ const data = useStaticQuery(graphql`
             projectDescription
           }
           projectImage {
-          fluid {
-            src
+          file {
+            url
           }
           }
           techStack
@@ -38,7 +38,7 @@ return (
       {data.allContentfulProject.edges.map((edge) => {
         return (
             <div  className="card-project" key={edge.node.id}>
-              <img src={edge.node.projectImage.fluid.src} alt={edge.node.title}></img>
+              <img src={edge.node.projectImage.file.url} alt={edge.node.title}></img>
               <div className="card-content">
                 <h2>{edge.node.title}</h2>
                 {Object.values(edge.node.projectDescription).map((desc, i) => {

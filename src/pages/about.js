@@ -65,9 +65,8 @@ const About = () => {
               about
             }
             profilePhoto {
-              fluid {
-                srcSet
-                src
+              file {
+                url
               }
             }
           }
@@ -87,7 +86,7 @@ const About = () => {
                     <p>{edge.node.about.about}</p>
                   </article>
                   <div className="image-wrapper">
-                    <img src={edge.node.profilePhoto.fluid.src} alt="profile"/>
+                    <img src={edge.node.profilePhoto.file.url} alt="profile"/>
                   </div>
                 </AboutWrapper>
               )

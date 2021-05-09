@@ -64,29 +64,7 @@ module.exports = {
         trackingId: `UA-172481986-1`
       }
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Archivo`,
-            variants: [`400`,`500`, `700`, `900`]
-          },
-          {
-            family: `Open Sans`,
-            variants: [`400`,`500`, `700`, `900`]
-          },
-          {
-            family: `Fira Sans`,
-            variants: [`400`,`500`, `700`, `900`]
-          },
-          {
-            family: `Inter`,
-            variants: [`400`,`500`,`600`, `700`, `900`]
-          },
-        ],
-      },
-    },
+
     {
       resolve: "gatsby-source-apiserver",
       options: {
@@ -115,6 +93,14 @@ module.exports = {
         },
   
       }
-    }
+    },
+
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: { 
+        nodeType: `UnsplashPhotos`, 
+        imagePath: 'url' 
+      }
+    },
   ],
 }

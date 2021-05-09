@@ -62,7 +62,7 @@ function Skills() {
 
     const data = useStaticQuery(graphql`
     query {
-        allContentfulSkills {
+        allContentfulSkills (filter: {node_locale: {eq: "en"}}) {
             edges {
               node {
                 id
@@ -84,6 +84,7 @@ return (
     <SkillsContainer className="skills-container">
         <SEO title="Skills" />  
         {data.allContentfulSkills.edges.map((skills) => {
+            
             return (
                 <div key={skills.node.id}>
                     <div className="skills-content">
@@ -93,9 +94,10 @@ return (
                     <ul>
                     {skills.node.skillLogo.map((image, i) => {
                         return (
-                            <li key={i}><span>{image.title}</span><img src={image.file.url} alt=""/></li>
+                            <li key={i}><span>{image.title}</span><img src={image.file.url} alt={image.title}/></li>
                         )
                     })}
+                    
                     </ul>
                 </div>
             )

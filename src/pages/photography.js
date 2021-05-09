@@ -86,11 +86,8 @@ const photoData = useStaticQuery(graphql`
                 }
               }
             urls {
-                raw
-                full
                 regular
-                small
-                thumb
+
             }
             description
           }
