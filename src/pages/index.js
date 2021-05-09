@@ -59,7 +59,7 @@ const HomePage = () => (
     <SEO title="Home" />
       <TextWrapper>
         <h1>Hi, I'm Hakan.</h1>
-        <p>I’m a creative front-end developer based in Stockholm, Sweden. I have a passion for clean UI, responsive Web design and photography.</p>
+        <p>I’m an experienced front-end developer based in Stockholm, Sweden. I have a passion for clean UI, responsive Web design and photography.</p>
         <span className="hero-text">Welcome</span>
       </TextWrapper>
       <Skills></Skills>
