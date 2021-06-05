@@ -57,7 +57,6 @@ const SkillsContainer = styled.div `
 
 `
 
-
 function Skills() {
 
     const data = useStaticQuery(graphql`

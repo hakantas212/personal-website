@@ -7,12 +7,9 @@ import SEO from "../components/seo"
 
 
 const Container = styled.div`
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(27rem, 100%), 1fr));
-    grid-auto-rows: 33rem;
-    width: 100%;
-
+    column-count: 3;
+    column-gap: 1rem;
+    column-width: 20rem;
 `
 const TextWrapper = styled.div`
     margin: 2.75rem 0;
@@ -41,7 +38,8 @@ const ImageContainer = styled.div`
         img {
             width: 100%;
             object-fit: cover;
-            display: block;
+            margin-bottom: 1rem;
+        }
             height: 100%;
         }
     &:hover .overlay {
@@ -61,9 +59,6 @@ const ImageContainer = styled.div`
         }
   }
 `
-
-
-  
 
 
 
@@ -109,7 +104,7 @@ const photoData = useStaticQuery(graphql`
                 {photoData.allInternalUnsplashPhotos.edges.map((edge) => {
                     return (
                         <ImageContainer key={edge.node.id}>
-                            <img src={edge.node.urls.regular} alt=""></img>
+                            <img src={edge.node.urls.regular} alt={edge.node.description}></img>
                             {/* <div className="overlay">
                                 <div className="text">
                                     <span>{edge.node.description}</span>
