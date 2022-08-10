@@ -104,7 +104,7 @@ const photoData = useStaticQuery(graphql`
                 {photoData.allInternalUnsplashPhotos.edges.map((edge) => {
                     return (
                         <ImageContainer key={edge.node.id}>
-                            <img src={edge.node.urls.regular} alt={edge.node.description}></img>
+                            <img src={edge.node.urls.regular} alt={edge.node.description} ></img>
                             {/* <div className="overlay">
                                 <div className="text">
                                     <span>{edge.node.description}</span>
