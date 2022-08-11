@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 import SEO from "../components/seo"
+import { useInView } from "react-intersection-observer"; // 1.9K gzipped
+import { motion, useAnimation } from "framer-motion";
 
 
 
@@ -104,7 +106,12 @@ const photoData = useStaticQuery(graphql`
                 {photoData.allInternalUnsplashPhotos.edges.map((edge) => {
                     return (
                         <ImageContainer key={edge.node.id}>
-                            <img src={edge.node.urls.regular} alt={edge.node.description} ></img>
+                            <motion.img src={edge.node.urls.regular} alt={edge.node.description}
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5 }}
+                            
+                            ></motion.img>
                             {/* <div className="overlay">
                                 <div className="text">
                                     <span>{edge.node.description}</span>

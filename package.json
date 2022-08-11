@@ -29,6 +29,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^9.4.0",
     "styled-components": "^5.1.1",
     "typeface-archivo": "^1.1.3",
     "typeface-inter": "^3.12.0"
