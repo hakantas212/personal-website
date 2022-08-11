@@ -45,7 +45,7 @@ return (
                       return <p key={i}>{desc}</p>
                     })}
                   <ul>
-                    {edge.node.techStack.map((stack,i) => {
+                    {edge.node.techStack && edge.node.techStack.map((stack,i) => {
                     return(
                       <li key={i}>{stack}</li>
                     )
